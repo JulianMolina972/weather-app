@@ -1,0 +1,13 @@
+.currentWeather {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+
+.currentWeather h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
