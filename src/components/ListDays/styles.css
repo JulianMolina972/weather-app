@@ -1,0 +1,8 @@
+.daily{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid black;
+  /* flex-wrap: wrap; */
+}
