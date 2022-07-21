@@ -20,11 +20,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
-  background: rgb(28, 20, 99);
+  background: rgb(53, 43, 148);
   color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 0px 20px 0px #002855 ;
+  height: 230px;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 1024px;
 }

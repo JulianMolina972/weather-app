@@ -10,30 +10,28 @@ export const CurrentWeather = () => {
     return <p>Loading...</p>
   }
 
-  console.log(weather)
-
   return (
-    <section className='currentWeather' >
+    <section className='currentWeather container' >
       <div className="currentWeather--details">
       <h1>{weather.timezone}</h1>
         <h2>Temp</h2>
-        <span>{weather.current.temp}°</span>
+        <span>{weather.current.temp} °C</span>
         <ul className="current--stats">
           <li>
-            <span>Wind </span>
+            <span>Wind: </span>
             <span>{weather.current.wind_speed} km/h</span>
           </li>
           <li>
-            <span>Humidity </span>
+            <span>Humidity: </span>
             <span>{weather.current.humidity}%</span>
           </li>
         </ul>
         <div className="currentWeather--actual">
-          {weather.current.weather.map(weather => <h3 key={weather.id}>{weather.main}</h3>)}
+          {weather.current.weather.map((weather) => <h3 key={weather.id}>{weather.main}</h3>)}
         </div>
       </div>
       <div className="currentWeather--images">
-        <img src="" alt="weather" />
+        <img src={`https://openweathermap.org/img/wn/${weather.current.weather[0].icon}@2x.png`} alt="Weather" />
       </div>
       
     </section>

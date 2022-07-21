@@ -6,9 +6,10 @@ const APIContext = createContext({});
 
 export const ApiContextProvider = ({ children }) => {
   const [data, setData] = useState(null);
-
+  const [coordinates, setCoordinates] = useState([7.89391, -72.50782]);
+  
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API}onecall?lat=51.5023&lon=-0.1277&metric&appid=${process.env.REACT_APP_API_KEY}`)
+    fetch(`${process.env.REACT_APP_API}onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
       .then(res => res.json())
       .then(weather => {
         setData(weather)

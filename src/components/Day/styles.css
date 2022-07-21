@@ -1,9 +1,13 @@
 .day {
   text-align: center;
   font-size: 1.8rem;
+  place-self: center;
 }
 
 .day img {
-  margin: 5px 0;
   object-fit: cover;
+}
+
+.day p {
+  /* text-align: center; */
 }
